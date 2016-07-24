@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist tmp",
-    "build": "rm -rf dist tmp && mkdir dist tmp && echo 'environment clearred' && babel --plugins transform-react-jsx src -d tmp && echo 'ES6 processed' && browserify tmp/index.js -o dist/index.js && echo 'browserified' && cp src/index.html dist/ && cp -r lib dist/"
+    "build": "rm -rf dist tmp && mkdir dist tmp && echo 'environment clearred' && babel --plugins transform-react-jsx src -d tmp && echo 'ES6 processed' && browserify tmp/index.js -o dist/index.js && echo 'browserified' && cp src/index.html dist/ && cp -r lib dist/ && cp -r img dist/ && cp -r css dist/"
   },
   "author": "",
   "license": "ISC",

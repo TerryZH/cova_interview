@@ -1,11 +1,13 @@
+import Layout from './layout.js'
+import CONSTS from './consts.js'
 import reducer from './reducer.js'
 
 window.onload = () => {
-
-  let store = Redux.createStore(reducer)
-
+  window.JOBS = CONSTS.JOBS
   ReactDOM.render(
-    <p>  hello, {store.toString}  </p>,
+    <ReactRedux.Provider store={Redux.createStore(reducer)}>
+      <Layout />
+    </ReactRedux.Provider>,
     document.getElementById('root')
   )
 }
