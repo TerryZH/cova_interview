@@ -27,21 +27,21 @@ export const JobListTemplate = ({ jobs }) => (
   </ul>
 )
 
-export const FilterBarTemplate = () => (
+export const FilterBarTemplate = ({isFulltime=true,isParttime=true,keyword='',onChangeKeyword,onToggleFulltime,onToggleParttime}) => (
   <div className="panel panel-default">
     <div className="panel-heading">Filters</div>
     <div className="panel-body">
       <form>
         <div className="form-group">
           <label>Search</label>
-          <input type="text" className="form-control" />
+          <input type="text" value={keyword} className="form-control" onChange={onChangeKeyword} />
         </div>
         <label>Contract type</label>
         <div className="checkbox">
-          <label><input type="checkbox" />Part-time</label>
+          <label><input type="checkbox" checked={isParttime} onChange={onToggleParttime} />Part-time</label>
         </div>
         <div className="checkbox">
-          <label><input type="checkbox" />Full-time</label>
+          <label><input type="checkbox" checked={isFulltime} onChange={onToggleFulltime} />Full-time</label>
         </div>
       </form>
     </div>
