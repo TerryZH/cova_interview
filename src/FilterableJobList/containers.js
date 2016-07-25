@@ -16,7 +16,7 @@ const mapStateToVisibleJobs = (state) => {
     if (state.keyword)
       if (state.keyword.length>0)
         if ( ! (job.organization+'\n'+job.location+'\n'+job.job_title).toLowerCase().includes(state.keyword.toLowerCase()) )
-         return false
+          return false
     return true
   }) }
 }
@@ -32,11 +32,6 @@ const mapDispatchtoSearchBarConfig = (dispatch) => {
     onToggleParttime: ()=>{
       dispatch(toggleParttime())
     }
-  }
-}
-
-const mapDispatchToVisibleJobs = (dispatch) => {
-  return {
   }
 }
 

@@ -1,7 +1,7 @@
-const Job = ({ id, posted_date, organization, location, applicants, score, contract_type, job_title, image }) => (
+const Job = ({ posted_date, organization, location, applicants, score, contract_type, job_title, image }) => (
   <li className="media no-margin-top">
     <div className="media-left">
-      <img className="media-object img-rounded" src={"img/"+image} />
+      <img className="media-object img-rounded" src={'img/'+image} />
     </div>
     <div className="media-body">
       <div className="media-line-1">{job_title + ' - ' + (contract_type==='FT'?'Full-time':'Part-time')}</div>
