@@ -17,6 +17,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/jsx-uses-vars": "error",
         "indent": [
             "error",
             2
@@ -33,5 +34,13 @@ module.exports = {
             "error",
             "never"
         ]
+    },
+    "globals": {
+        "JOBS": false,
+        "moment": false,
+        "React": false,
+        "ReactDOM": false,
+        "Redux": false,
+        "ReactRedux": false
     }
 };
