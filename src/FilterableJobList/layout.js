@@ -1,6 +1,6 @@
 import { FilterBar, VisibleJobList } from './containers.js'
 
-const FilterableJobList = () => (
+const FilterableJobListLayout = () => (
   <div className="row">
     <div className="col-md-4">
       <FilterBar />
@@ -11,4 +11,4 @@ const FilterableJobList = () => (
   </div>
 )
 
-export default FilterableJobList
+export default FilterableJobListLayout

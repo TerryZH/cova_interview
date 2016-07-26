@@ -1,11 +1,11 @@
 import { FilterBarTemplate, JobListTemplate } from './templates.js'
 import { toggleFulltime, toggleParttime, changeKeyword } from './actions.js'
 
-const mapStateToSearchBarConfig = (state) => {
+const mapStateToSearchBarConfig = ({FilterableJobList:state}) => {
   return state
 }
 
-const mapStateToVisibleJobs = (state) => {
+const mapStateToVisibleJobs = ({FilterableJobList:state}) => {
   return { jobs: JOBS.filter((job)=>{
     if (!state.isFulltime)
       if (job.contract_type==='FT')

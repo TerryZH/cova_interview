@@ -1,4 +1,4 @@
-export const isFulltime = (state=true, action) =>{
+const isFulltime = (state=true, action) =>{
   switch (action.type) {
   case 'TOGGLE_FULLTIME':
     return !state
@@ -6,7 +6,8 @@ export const isFulltime = (state=true, action) =>{
     return state
   }
 }
-export const isParttime = (state=true, action) =>{
+
+const isParttime = (state=true, action) =>{
   switch (action.type) {
   case 'TOGGLE_PARTTIME':
     return !state
@@ -14,7 +15,8 @@ export const isParttime = (state=true, action) =>{
     return state
   }
 }
-export const keyword = (state='', action) =>{
+
+const keyword = (state='', action) =>{
   switch (action.type) {
   case 'CHANGE_KEYWORD':
     return action.payload.keyword
@@ -22,3 +24,11 @@ export const keyword = (state='', action) =>{
     return state
   }
 }
+
+const FilterableJobList = Redux.combineReducers({
+  isFulltime,
+  isParttime,
+  keyword
+})
+
+export default FilterableJobList

@@ -1,9 +1,7 @@
-import {isFulltime, isParttime, keyword} from './FilterableJobList/reducers.js'
+import FilterableJobList from './FilterableJobList/reducer.js'
 
 const reducer = Redux.combineReducers({
-  isFulltime,
-  isParttime,
-  keyword
+  FilterableJobList
 })
 
 export default reducer
